@@ -5,17 +5,17 @@ namespace AXIE.WEBApi.Services
 {
     public class GlobalService : IGlobalService<Class1>
     {
-        public IList<Class1> Add()
+        public List<Class1> Add()
         {
             throw new NotImplementedException();
         }
 
-        public IList<Class1> GetAll()
+        public List<Class1> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public IList<Class1> GetById()
+        public Class1 GetById()
         {
             throw new NotImplementedException();
         }

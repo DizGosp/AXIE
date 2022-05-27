@@ -2,8 +2,8 @@
 {
     public interface IGlobalService<T>
     {
-        IList<T> GetAll();
-        IList<T> GetById();
-        IList<T> Add();
+        List<T> GetAll();
+        T GetById();
+        List<T> Add();
     }
 }
