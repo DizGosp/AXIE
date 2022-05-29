@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Flurl.Http;
 
 namespace AXIE.WinUI.Account
 {
@@ -16,10 +17,10 @@ namespace AXIE.WinUI.Account
         {
             InitializeComponent();
         }
-
+            
         private void btnShow_Click(object sender, EventArgs e)
         {
-
+            var result = "https://localhost:7259/api/Account".GetJsonAsync<dynamic>().Result;
         }
     }
 }
