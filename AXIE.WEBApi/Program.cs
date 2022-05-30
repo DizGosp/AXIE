@@ -1,4 +1,4 @@
-using AXIE.Model;
+using AXIE.Models;
 using AXIE.WEBApi.Interfaces;
 using AXIE.WEBApi.Services;
 

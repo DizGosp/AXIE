@@ -32,6 +32,11 @@
             this.dgvAccountList = new System.Windows.Forms.DataGridView();
             this.btnShow = new System.Windows.Forms.Button();
             this.txtAccountList = new System.Windows.Forms.TextBox();
+            this.AccName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MMR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NftAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccountList)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +56,12 @@
             this.dgvAccountList.AllowUserToAddRows = false;
             this.dgvAccountList.AllowUserToDeleteRows = false;
             this.dgvAccountList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccountList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AccName,
+            this.Password,
+            this.MMR,
+            this.NftAccount,
+            this.EmailAddress});
             this.dgvAccountList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAccountList.Location = new System.Drawing.Point(3, 16);
             this.dgvAccountList.Name = "dgvAccountList";
@@ -75,6 +86,46 @@
             this.txtAccountList.Size = new System.Drawing.Size(293, 20);
             this.txtAccountList.TabIndex = 2;
             // 
+            // AccName
+            // 
+            this.AccName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.AccName.DataPropertyName = "AccName";
+            this.AccName.HeaderText = "Account name";
+            this.AccName.Name = "AccName";
+            this.AccName.ReadOnly = true;
+            // 
+            // Password
+            // 
+            this.Password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Password.DataPropertyName = "Password";
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
+            // 
+            // MMR
+            // 
+            this.MMR.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MMR.DataPropertyName = "MMR";
+            this.MMR.HeaderText = "MMR";
+            this.MMR.Name = "MMR";
+            this.MMR.ReadOnly = true;
+            // 
+            // NftAccount
+            // 
+            this.NftAccount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NftAccount.DataPropertyName = "NftAccount";
+            this.NftAccount.HeaderText = "Nft account";
+            this.NftAccount.Name = "NftAccount";
+            this.NftAccount.ReadOnly = true;
+            // 
+            // EmailAddress
+            // 
+            this.EmailAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EmailAddress.DataPropertyName = "EmailAddress";
+            this.EmailAddress.HeaderText = "Email address";
+            this.EmailAddress.Name = "EmailAddress";
+            this.EmailAddress.ReadOnly = true;
+            // 
             // frmAccountList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -98,5 +149,10 @@
         private System.Windows.Forms.DataGridView dgvAccountList;
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.TextBox txtAccountList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AccName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MMR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NftAccount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmailAddress;
     }
 }

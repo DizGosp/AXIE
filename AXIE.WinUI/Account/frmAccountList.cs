@@ -7,20 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AXIE.Models.Account;
 using Flurl.Http;
+using Newtonsoft.Json;
 
 namespace AXIE.WinUI.Account
 {
     public partial class frmAccountList : Form
     {
+        private readonly ApiService _apiService = new ApiService("Account");
         public frmAccountList()
         {
             InitializeComponent();
         }
             
-        private void btnShow_Click(object sender, EventArgs e)
+        private async void btnShow_Click(object sender, EventArgs e)
         {
-            var result = "https://localhost:7259/api/Account".GetJsonAsync<dynamic>().Result;
+            var listAccounts =await _apiService.Get<List<AccountDTO>>();
+
+            dgvAccountList.AutoGenerateColumns = false;
+            dgvAccountList.DataSource = listAccounts;
+
         }
     }
 }

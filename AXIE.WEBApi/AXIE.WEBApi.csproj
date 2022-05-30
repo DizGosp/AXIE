@@ -16,7 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AXIE.Model\AXIE.Model.csproj" />
+    <ProjectReference Include="..\AXIE.Models\AXIE.Model.csproj" />
+    <ProjectReference Include="..\AXIE.WinUI\AXIE.WinUI.csproj" />
   </ItemGroup>
 
 </Project>
