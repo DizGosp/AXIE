@@ -29,5 +29,13 @@ namespace AXIE.WinUI.Account
             dgvAccountList.DataSource = listAccounts;
 
         }
+
+        private async void frmAccountList_Load(object sender, EventArgs e)
+        {
+            var listAccounts = await _apiService.Get<List<AccountDTO>>();
+
+            dgvAccountList.AutoGenerateColumns = false;
+            dgvAccountList.DataSource = listAccounts;
+        }
     }
 }

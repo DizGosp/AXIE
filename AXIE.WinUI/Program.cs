@@ -17,7 +17,7 @@ namespace AXIE.WinUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAccountList());
+            Application.Run(new frmHome());
         }
     }
 }
