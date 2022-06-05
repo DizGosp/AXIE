@@ -3,7 +3,7 @@
     public interface IGlobalService<T>
     {
         List<T> GetAll();
-        T GetById();
+        Task<T> GetById(Guid id);
         List<T> Add();
     }
 }

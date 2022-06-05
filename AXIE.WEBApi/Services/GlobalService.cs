@@ -15,7 +15,7 @@ namespace AXIE.WEBApi.Services
             throw new NotImplementedException();
         }
 
-        public Class1 GetById()
+        public Task<Class1> GetById(Guid id)
         {
             throw new NotImplementedException();
         }

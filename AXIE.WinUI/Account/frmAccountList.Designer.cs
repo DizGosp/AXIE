@@ -33,13 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvAccountList = new System.Windows.Forms.DataGridView();
-            this.btnShow = new System.Windows.Forms.Button();
-            this.txtAccountList = new System.Windows.Forms.TextBox();
             this.AccName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MMR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NftAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnShow = new System.Windows.Forms.Button();
+            this.txtAccountList = new System.Windows.Forms.TextBox();
+            this.addAcc = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccountList)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +64,7 @@
             // 
             // dgvAccountList
             // 
+            this.dgvAccountList.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.dgvAccountList.AllowUserToAddRows = false;
             this.dgvAccountList.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -91,7 +93,6 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAccountList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAccountList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAccountList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AccName,
             this.Password,
@@ -114,23 +115,6 @@
             this.dgvAccountList.RowHeadersVisible = false;
             this.dgvAccountList.Size = new System.Drawing.Size(705, 375);
             this.dgvAccountList.TabIndex = 0;
-            // 
-            // btnShow
-            // 
-            this.btnShow.Location = new System.Drawing.Point(643, 46);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(75, 23);
-            this.btnShow.TabIndex = 1;
-            this.btnShow.Text = "Show";
-            this.btnShow.UseVisualStyleBackColor = true;
-            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
-            // 
-            // txtAccountList
-            // 
-            this.txtAccountList.Location = new System.Drawing.Point(16, 12);
-            this.txtAccountList.Name = "txtAccountList";
-            this.txtAccountList.Size = new System.Drawing.Size(151, 20);
-            this.txtAccountList.TabIndex = 2;
             // 
             // AccName
             // 
@@ -172,16 +156,44 @@
             this.NftAccount.Name = "NftAccount";
             this.NftAccount.ReadOnly = true;
             // 
+            // btnShow
+            // 
+            this.btnShow.Location = new System.Drawing.Point(643, 46);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(75, 23);
+            this.btnShow.TabIndex = 1;
+            this.btnShow.Text = "Show";
+            this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
+            // txtAccountList
+            // 
+            this.txtAccountList.Location = new System.Drawing.Point(13, 46);
+            this.txtAccountList.Name = "txtAccountList";
+            this.txtAccountList.Size = new System.Drawing.Size(151, 20);
+            this.txtAccountList.TabIndex = 2;
+            // 
+            // addAcc
+            // 
+            this.addAcc.Location = new System.Drawing.Point(643, 12);
+            this.addAcc.Name = "addAcc";
+            this.addAcc.Size = new System.Drawing.Size(75, 23);
+            this.addAcc.TabIndex = 3;
+            this.addAcc.Text = "Add";
+            this.addAcc.UseVisualStyleBackColor = true;
+            // 
             // frmAccountList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(733, 477);
+            this.Controls.Add(this.addAcc);
             this.Controls.Add(this.txtAccountList);
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmAccountList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAccountList";
@@ -204,5 +216,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MMR;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmailAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn NftAccount;
+        private System.Windows.Forms.Button addAcc;
     }
 }

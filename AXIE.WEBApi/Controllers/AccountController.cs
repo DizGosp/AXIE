@@ -21,10 +21,16 @@ namespace AXIE.WEBApi.Controllers
             return _accountService.GetAll();
         }
 
-        [HttpGet]
-        protected async Task<List<AccountDTO>> GetByParametars([FromQuery]AccountSearchDTO request)
+        [HttpPost]
+        public  List<AccountDTO> GetByParametars([FromQuery]AccountSearchDTO request)
         {
-            return await _accountService.GetByParametars(request);
+            return _accountService.GetByParametars(request);
+        }
+        
+        [HttpGet("{id}")]
+        public async Task<AccountDTO> GetById(Guid id)
+        {
+            return await _accountService.GetById(id);
         }
     }
 }

@@ -40,7 +40,7 @@ namespace AXIE.WEBApi.Services
             }
         }
 
-        public async Task<List<AccountDTO>> GetByParametars(AccountSearchDTO request)
+        public List<AccountDTO> GetByParametars(AccountSearchDTO request)
         {
             using (var connection = new SqlConnection(_config.GetConnectionString("database")))
             {
@@ -66,7 +66,7 @@ namespace AXIE.WEBApi.Services
                         quary += @$"[accName] LIKE '%{request.AccName}%' AND ";
 
                     if (!string.IsNullOrWhiteSpace(request.EmailAddress))
-                        quary += @$"[mailAddress] LIKE '%{request.EmailAddress}%'";
+                        quary += @$"[mailAddress] LIKE '%{request.EmailAddress.PadRight(30)}%'";
                 }
 
                 else if (!string.IsNullOrWhiteSpace(request.AccName))
@@ -76,13 +76,32 @@ namespace AXIE.WEBApi.Services
                     quary += @$" WHERE [mailAddress] LIKE '%{request.EmailAddress}%'";
 
 
-                return (List<AccountDTO>)await connection.QueryAsync<List<AccountDTO>>(quary);
+                return connection.Query<AccountDTO>(quary)
+                                 .ToList();
             }
         }
 
-        AccountDTO IGlobalService<AccountDTO>.GetById()
+        public async Task<AccountDTO> GetById(Guid id)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(_config.GetConnectionString("database")))
+            {
+                connection.Open();
+
+                var quary = @$"SELECT TOP 1 [nftAccountPK] AS NftAccountPK
+                                                             ,[userFK] AS UserFK
+                                                             ,[accountStatusFK] AS AccountStatusFK
+                                                             ,[teamFK] AS TeamFK
+                                                             ,[accountRoninFK] AS AccountRoninFK
+                                                             ,[dateOfEntry] AS DateOfEntry
+                                                             ,[mailAddress] AS EmailAddress
+                                                             ,[password] AS Password
+                                                             ,[accName] AS AccName
+                                                             ,[MMR] AS MMR
+                                                         FROM [AXIE].[dbo].[NftAccount]
+                                                         WHERE NftAccountPK = '{id}'";
+
+                return (AccountDTO)await connection.QueryFirstAsync<AccountDTO>(quary);
+            }
         }
     }
 }

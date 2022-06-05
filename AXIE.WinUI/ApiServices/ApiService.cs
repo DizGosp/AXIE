@@ -22,5 +22,19 @@ namespace AXIE.WinUI
 
             return result;
         }
+
+        public async Task<T> GetByParametars<T>(object request)
+        {
+            var result = await $"{Properties.Settings.Default.APIUrl}/{_route}".GetJsonAsync<T>();
+
+            return result;
+        }
+
+        public async Task<T> GetById<T>(object id)
+        {
+            var result =await $"{Properties.Settings.Default.APIUrl}/{_route}/{id}".GetJsonAsync<T>();
+
+            return result;
+        }
     }
 }

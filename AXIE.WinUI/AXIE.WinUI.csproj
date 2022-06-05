@@ -68,13 +68,7 @@
     <Compile Include="Account\frmAddAccount.Designer.cs">
       <DependentUpon>frmAddAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Account\frmListOfAccounts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Account\frmListOfAccounts.Designer.cs">
-      <DependentUpon>frmListOfAccounts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ApiService.cs" />
+    <Compile Include="ApiServices\ApiService.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,9 +88,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Account\frmAddAccount.resx">
       <DependentUpon>frmAddAccount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Account\frmListOfAccounts.resx">
-      <DependentUpon>frmListOfAccounts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
@@ -130,6 +121,9 @@
       <Project>{5a9edd8f-5654-4ca2-8f72-837c819a09ae}</Project>
       <Name>AXIE.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NFT\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
