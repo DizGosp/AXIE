@@ -103,5 +103,10 @@ namespace AXIE.WEBApi.Services
                 return (AccountDTO)await connection.QueryFirstAsync<AccountDTO>(quary);
             }
         }
+
+        public Task<bool> Add(AccountDTO request)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -28,33 +28,93 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtAccName = new System.Windows.Forms.TextBox();
+            this.lblAccName = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblMMR = new System.Windows.Forms.Label();
+            this.txtMMR = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtAccName
             // 
-            this.textBox1.Location = new System.Drawing.Point(29, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtAccName.Location = new System.Drawing.Point(29, 29);
+            this.txtAccName.Name = "txtAccName";
+            this.txtAccName.Size = new System.Drawing.Size(171, 20);
+            this.txtAccName.TabIndex = 0;
             // 
-            // label1
+            // lblAccName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.lblAccName.AutoSize = true;
+            this.lblAccName.Location = new System.Drawing.Point(29, 10);
+            this.lblAccName.Name = "lblAccName";
+            this.lblAccName.Size = new System.Drawing.Size(76, 13);
+            this.lblAccName.TabIndex = 1;
+            this.lblAccName.Text = "Account name";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(29, 65);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblEmail.TabIndex = 3;
+            this.lblEmail.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(29, 84);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(171, 20);
+            this.txtEmail.TabIndex = 2;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(29, 116);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(53, 13);
+            this.lblPassword.TabIndex = 5;
+            this.lblPassword.Text = "Password";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(29, 135);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(171, 20);
+            this.txtPassword.TabIndex = 4;
+            // 
+            // lblMMR
+            // 
+            this.lblMMR.AutoSize = true;
+            this.lblMMR.Location = new System.Drawing.Point(29, 169);
+            this.lblMMR.Name = "lblMMR";
+            this.lblMMR.Size = new System.Drawing.Size(33, 13);
+            this.lblMMR.TabIndex = 7;
+            this.lblMMR.Text = "MMR";
+            // 
+            // txtMMR
+            // 
+            this.txtMMR.Location = new System.Drawing.Point(29, 188);
+            this.txtMMR.Name = "txtMMR";
+            this.txtMMR.Size = new System.Drawing.Size(171, 20);
+            this.txtMMR.TabIndex = 6;
             // 
             // frmAddAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(483, 384);
+            this.Controls.Add(this.lblMMR);
+            this.Controls.Add(this.txtMMR);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblAccName);
+            this.Controls.Add(this.txtAccName);
             this.Name = "frmAddAccount";
             this.Text = "frmAddAccount";
             this.ResumeLayout(false);
@@ -64,7 +124,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtAccName;
+        private System.Windows.Forms.Label lblAccName;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblMMR;
+        private System.Windows.Forms.TextBox txtMMR;
     }
 }

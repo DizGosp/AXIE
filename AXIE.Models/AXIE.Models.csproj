@@ -41,10 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountRonin\AccountRoninDTO.cs" />
+    <Compile Include="AccountRonin\AccountRoninSearchDTO.cs" />
     <Compile Include="Account\AccountDTO.cs" />
     <Compile Include="Account\AccountSearchDTO.cs" />
+    <Compile Include="AppUsers\AppUserDTO.cs" />
+    <Compile Include="AppUsers\AppUserRequestDTO.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Team\TeamDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

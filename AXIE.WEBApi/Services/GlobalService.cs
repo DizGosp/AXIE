@@ -10,6 +10,11 @@ namespace AXIE.WEBApi.Services
             throw new NotImplementedException();
         }
 
+        public Task<bool> Add(Class1 request)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Class1> GetAll()
         {
             throw new NotImplementedException();

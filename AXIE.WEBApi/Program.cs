@@ -1,6 +1,10 @@
 using AXIE.Models;
+using AXIE.Models.AppUsers;
 using AXIE.WEBApi.Interfaces;
 using AXIE.WEBApi.Services;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Identity;
+using NPOI.SS.Formula.Functions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,10 +15,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
 //Dependency
 builder.Services.AddScoped<IGlobalService<Class1>, GlobalService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IAccountRoninService, AccountRoninService>();
+//builder.Services.AddScoped<IPasswordHasher<T>, PasswordHasher<T>>();
+//builder.Services.AddScoped<IAuthentificationService, AuthentificationService>();
 
 var app = builder.Build();
 
@@ -24,6 +30,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseAuthentication();
 
 app.UseHttpsRedirection();
 

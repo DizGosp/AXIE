@@ -111,7 +111,6 @@
             this.dgvAccountList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.dgvAccountList.Location = new System.Drawing.Point(0, 13);
             this.dgvAccountList.Name = "dgvAccountList";
-            this.dgvAccountList.ReadOnly = true;
             this.dgvAccountList.RowHeadersVisible = false;
             this.dgvAccountList.Size = new System.Drawing.Size(705, 375);
             this.dgvAccountList.TabIndex = 0;
@@ -122,7 +121,6 @@
             this.AccName.DataPropertyName = "AccName";
             this.AccName.HeaderText = "Account name";
             this.AccName.Name = "AccName";
-            this.AccName.ReadOnly = true;
             // 
             // Password
             // 
@@ -130,7 +128,6 @@
             this.Password.DataPropertyName = "Password";
             this.Password.HeaderText = "Password";
             this.Password.Name = "Password";
-            this.Password.ReadOnly = true;
             // 
             // MMR
             // 
@@ -138,7 +135,6 @@
             this.MMR.DataPropertyName = "MMR";
             this.MMR.HeaderText = "MMR";
             this.MMR.Name = "MMR";
-            this.MMR.ReadOnly = true;
             // 
             // EmailAddress
             // 
@@ -146,7 +142,6 @@
             this.EmailAddress.DataPropertyName = "EmailAddress";
             this.EmailAddress.HeaderText = "Email address";
             this.EmailAddress.Name = "EmailAddress";
-            this.EmailAddress.ReadOnly = true;
             // 
             // NftAccount
             // 
@@ -154,7 +149,6 @@
             this.NftAccount.DataPropertyName = "NftAccount";
             this.NftAccount.HeaderText = "Nft account";
             this.NftAccount.Name = "NftAccount";
-            this.NftAccount.ReadOnly = true;
             // 
             // btnShow
             // 

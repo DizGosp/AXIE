@@ -4,6 +4,6 @@
     {
         List<T> GetAll();
         Task<T> GetById(Guid id);
-        List<T> Add();
+        Task<bool> Add(T request);
     }
 }
